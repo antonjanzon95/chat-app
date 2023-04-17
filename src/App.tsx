@@ -18,7 +18,9 @@ function App() {
   const color = colors[Math.floor(Math.random() * colors.length)];
 
   useEffect(() => {
-    socketRef.current = io("http://localhost:3000");
+    socketRef.current = io(
+      "https://chat-app-api-production-45f8.up.railway.app"
+    );
 
     socketRef.current.on("connect", () => console.log(socketRef.current!.id));
     socketRef.current.on("connect_error", () => {
