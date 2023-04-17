@@ -3,6 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    screens: { laptop: "1024px" },
   },
   plugins: [require("daisyui")],
 };

@@ -49,9 +49,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-center text-6xl font-bold">ChatApp</h1>
-      <LoginBtn />
-      <div>
+      <nav className="flex justify-between items-center p-4 h-20">
+        <h1 className="text-center laptop:text-6xl text-xl font-bold">
+          ChatApp
+        </h1>
+        <LoginBtn />
+      </nav>
+      <main className="bg-slate-100 min-h-screen">
         <form onSubmit={handleSubmit} className="p-4 flex justify-center">
           <div className="form-control">
             <div className="input-group">
@@ -68,7 +72,7 @@ function App() {
             </div>
           </div>
         </form>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 w-[350px] mx-auto bg-slate-50 shadow-xl p-6">
           {sentMessages.map((message, index) => (
             <p key={index}>
               <span className="font-semibold">{message.user}:</span>{" "}
@@ -82,7 +86,7 @@ function App() {
             </p>
           ))}
         </div>
-      </div>
+      </main>
     </div>
   );
 }
